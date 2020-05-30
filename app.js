@@ -16,8 +16,6 @@ let indexRoutes 		= require('./routes/index'),
 	campgroundRoutes 	= require('./routes/campgrounds'),
 	commentRoutes   	= require('./routes/comments')
 
-const PORT = process.env.PORT || 3000
-
 // seedDB()
 
 mongoose.set('useNewUrlParser', true);
@@ -60,6 +58,7 @@ app.use('/', indexRoutes)
 app.use('/campgrounds', campgroundRoutes)
 app.use('/campgrounds/:id/comments', commentRoutes)
 
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-	console.log(`Server running at port ${PORT} and network\thttp://localhost:${PORT}`)
+	console.log(`Server running at port ${PORT}`)
 })
