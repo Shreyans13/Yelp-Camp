@@ -16,7 +16,7 @@ let indexRoutes 		= require('./routes/index'),
 	campgroundRoutes 	= require('./routes/campgrounds'),
 	commentRoutes   	= require('./routes/comments')
 
-const PORT = 3000
+const PORT = process.env.PORT || 3000
 
 // seedDB()
 
