@@ -25,7 +25,12 @@ mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
 mongoose.set('useUnifiedTopology', true)
 
-mongoose.connect('mongodb://localhost/yelp_camp_v3')
+//mongoose.connect('mongodb://localhost/yelp_camp_v3')
+mongoose.connect('mongodb+srv://admin:admin@123@cluster-iv870.mongodb.net/test?retryWrites=true&w=majority').then(() => {
+	console.log('Connected to Mongo DB Database')
+}).catch(err => {
+	console.log('Error: ', err.message)
+})
 
 app.use(flash())
 app.use(expressSession({
