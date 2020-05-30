@@ -44,3 +44,19 @@ To see the page in action, go to Yelp Camp
   8. passport
   9. passport-local
   10. passport-local-mongoose
+
+## New Feature to be added
+1. Yelp Camp Google Maps API 
+2. Yelp Camp Refactor - Moment JS
+3. Yelp Camp Admin User Role Authorization
+4. Yelp Camp Creating User Profiles with Node JS
+5. Yelp Camp Node JS Password Reset
+6. Yelp Camp Fuzzy Search with Express JS and Mongoose
+7. Yelp Camp Image Upload with Node
+8. Yelp Camp Notifications Walk-through
+9. Yelp Camp Slugs Implementation
+10. Yelp Camp Like button
+11. Yelp Camp Reviews
+12. Yelp Camp Collapsible comment section
+13. Yelp Camp Pagination feature
+
