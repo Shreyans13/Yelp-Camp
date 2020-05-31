@@ -6,7 +6,7 @@ YelpCamp is a Node.js web application with RESTful routing project from the Udem
   >This course is different. I've incorporated everything I learned in my years of teaching to make this course not only more effective but more engaging.
 
 ## To see the demo
-To see the page in action, go to Yelp Camp
+To see the page in action, go to my [Yelp Camp App](https://peaceful-reaches-73403.herokuapp.com/)
 1. Username: User
 2. Password: user12345
 
@@ -32,7 +32,7 @@ To see the page in action, go to Yelp Camp
 ## Built with
   ### Front End
   1. Bootstrap 4
-  2. Font Awaesome
+  2. Font Awesome
   ### Back End
   1. body-parser
   2. connect-flash
@@ -60,3 +60,6 @@ To see the page in action, go to Yelp Camp
 12. Yelp Camp Collapsible comment section
 13. Yelp Camp Pagination feature
 
+### Deplyed at Heroku [Yelp Camp](https://peaceful-reaches-73403.herokuapp.com/)
+
+#### :star: Made with :heart: by Shreyans Jain from my Udemy course :mortar_board: :star:
