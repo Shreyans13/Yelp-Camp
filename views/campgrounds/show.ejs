@@ -23,7 +23,7 @@
 							Submitted By <cite title="Source Title"><%= campground.author.username%></cite>
 						</footer>
 					</blockquote>
-					<% if(currentUser && campground.author.id.equals(currentUser._id)) { %>
+					<% if(currentUser && campground.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin) { %>
 					<form action="/campgrounds/<%= campground._id %>?_method=DELETE" method="POST" class="list-inline">
 						<a href="/campgrounds/<%= campground._id %>/edit" type="button" class="btn btn-outline-warning px-5 rounded-lg list-inline-item"><i class="fas fa-edit"></i> Edit</a>
 						<button class="btn btn-danger px-5 rounded-lg list-inline-item"><i class="fas fa-trash"></i> Delete</button>
@@ -45,7 +45,7 @@
 							<p>
 								<%= campground.comments[i].text %>
 							</p>
-							<% if(currentUser && campground.comments[i].author.id.equals(currentUser._id)) { %>
+							<% if(currentUser && campground.comments[i].author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin) { %>
 								<form action='/campgrounds/<%= campground._id %>/comments/<%= campground.comments[i]._id%>?_method=DELETE' method='POST'>
 									<a class="btn btn-sm btn-warning" href="/campgrounds/<%= campground._id %>/comments/<%= campground.comments[i]._id%>/edit"><i class="fas fa-edit"></i> Edit</a>
 									<button type="submit" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i> Delete</button>

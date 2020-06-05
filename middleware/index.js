@@ -10,7 +10,7 @@ module.exports = {
 					req.flash('error', 'Campground not found')
 					res.redirect('back')
 				} else {
-					if (foundCampground.author.id.equals(req.user.id)) {
+					if (foundCampground.author.id.equals(req.user.id) || req.user.isAdmin) {
 						next()
 					} else {
 						req.flash('You don`t have permission to do that')
@@ -32,7 +32,7 @@ module.exports = {
 					req.flash('error', 'Comment not found')
 					res.redirect('back')
 				} else {
-					if (foundComment.author.id.equals(req.user.id)) {
+					if (foundComment.author.id.equals(req.user.id) || req.user.isAdmin) {
 						next()
 					} else {
 						req.flash('You don`t have permission to do that')

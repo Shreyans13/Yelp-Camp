@@ -13,6 +13,9 @@ indexRoutes.get('/register', (req, res) => {
 
 indexRoutes.post('/register', (req, res) => {
 	let newUser = new User({username: req.body.username})
+	if (req.body.adminCode == 'admin123'){
+		newUser.isAdmin = true
+	}
 	User.register(newUser, req.body.password, (err, user) => {
 		if(err) {
 			console.log(err)
