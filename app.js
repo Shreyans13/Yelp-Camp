@@ -30,6 +30,7 @@ mongoose.connect('mongodb+srv://admin:admin@123@cluster-iv870.mongodb.net/test?r
 	console.log('Error: ', err.message)
 })
 
+app.locals.moment = require('moment');
 app.use(flash())
 app.use(expressSession({
 	secret: "Once again leo is a dog",

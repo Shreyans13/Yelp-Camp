@@ -9,6 +9,7 @@ let commentSchema = mongoose.Schema({
 		},
 		username: String
 	},
+	createdAt: { type: Date, default: Date.now },
 })
 
 module.exports = mongoose.model('Comment', commentSchema)
