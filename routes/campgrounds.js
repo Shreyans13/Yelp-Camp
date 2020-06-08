@@ -1,3 +1,4 @@
+require('dotenv').config()
 let express 			= require('express')
 let campgroundRoutes 	= express.Router();
 let Campground 			= require('../models/campgrounds')
@@ -20,6 +21,7 @@ campgroundRoutes.post('/', middleware.isLoggedIn , (req, res) => {
 		image : req.body.image,
 		description: req.body.description,
 		price: req.body.price,
+		location: req.body.location,
 		author: {
 			id : req.user._id,
 			username : req.user.username
@@ -45,7 +47,7 @@ campgroundRoutes.get('/:id', (req, res) => {
 			console.log(err)
 			res.redirect('back')
 		} else {
-			res.render('campgrounds/show', {campground: found})
+			res.render('campgrounds/show', {campground: found, api: process.env})
 		}
 	})
 })
