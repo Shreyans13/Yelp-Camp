@@ -20,7 +20,7 @@ indexRoutes.post('/register', (req, res) => {
 		if(err) {
 			console.log(err)
 			req.flash('error', err.message)
-			return res.render('authorization/register')
+			return res.render('authorization/register', {error: err.message})
 		}
 			passport.authenticate('local')(req, res, () => {
 			req.flash('success', 'Welcome to yelp Camp ' + user.username)
